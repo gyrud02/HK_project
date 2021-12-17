@@ -13,5 +13,17 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/activation.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/commons-dbcp2-2.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/cos.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/javax.mail-1.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/javax.mail-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/mail.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Hyo-Kyung/포트폴리오/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
