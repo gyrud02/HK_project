@@ -79,7 +79,6 @@
 		</div> <!-- 왼쪽 메뉴 -->
 	  </div>
 	 <div class="col-lg-9">
-<article>
 		<form method="post" id="contentform" name="contentform" action="writePro.jsp" style="padding:1em;">
 		<h2>QnA Board</h2>
         <table align=left width=700 cellpadding=2 >
@@ -119,7 +118,6 @@
 				</tr>
 			</table>
 		</form>
-</article>
 <script type="text/javascript">
 	
 	// 글 삭제 버튼을 누르면 새 창이 뜬다.

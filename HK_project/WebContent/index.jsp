@@ -1,6 +1,6 @@
 <%@page import="JoinMember.MemberDAO"%>
 <%@page import="JoinMember.MemberBean"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" session="true"
+<%@page language="java" contentType="text/html; charset=UTF-8" session="true"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -120,105 +120,6 @@
           </a>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/pants/pants1.jpg" alt="pants1" id="item"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#" id="item">Item One</a>
-                </h4>
-                <h5>￦ 28,900</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/pants/pants5-3.jpg" alt="" id="item"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#" id="item">Item Two</a>
-                </h4>
-                <h5>￦ 45,000</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/outer/outer3.jpg" alt="outer3" id="item"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#" id="item">Item Three</a>
-                </h4>
-                <h5>￦ 19,900</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/pants/pants3-2.jpg" alt="" id="item"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#" id="item">Item Four</a>
-                </h4>
-                <h5>￦ 79,900</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/outer/outer5-6.jpg" alt="outer3" id="item"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="../gallary/gallarycontent.jsp?num=&item=" id="item">Item Five</a>
-                </h4>
-                <h5>￦ 15,000</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/outer/outer1.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Six</a>
-                </h4>
-                <h5>￦ 24,000</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- /.row -->
 
       </div>
       <!-- /.col-lg-9 -->
