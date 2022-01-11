@@ -8,53 +8,42 @@
 </head>
 <body>
 <jsp:include page="../Layout/header.jsp"/>
-<!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Page Content -->
-  <div class="container">
-
+ <div class="container">
     <div class="row">
-
       <div class="col-lg-3">
-        <h1 class="my-4">Shop Name</h1>
+        <h1 class="my-4"><a href="../index.jsp">HKmall</a></h1>
         <div class="list-group">
-          <a href="#" class="list-group-item active">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
-      </div>
-      <!-- /.col-lg-3 -->
+<%
+	String id = (String) session.getAttribute("id");
 
-      <div class="col-lg-9">
+	if(id == null){
+%>	
+          <a href="../Menu/outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
+          <a href="../Menu/pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
+          <a href="../Menu/board.jsp" class="list-group-item" id="QnA">문의게시판</a>
+          <a href="../Menu/fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
+          <a href="../gallary/gallary.jsp" class="list-group-item" id="gallary">갤러리</a>
+<%	
+	}else{
+%>		
+          <a href="../Menu/outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
+          <a href="../Menu/pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
+          <a href="../Menu/board.jsp" class="list-group-item" id="QnA">문의게시판</a>
+          <a href="../Menu/fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
+          <a href="../gallary/gallary.jsp" class="list-group-item" id="gallary">갤러리</a>
+	      <a href="../member/logout.jsp" class="list-group-item" id="delete">로그아웃</a>
+<% 
+	} // if문 끝
+%> 
+        </div> <!-- 왼쪽 메뉴 -->
+	  </div>
 
+
+    <div class="col-lg-9">
+	  <div class="row">
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+          <img class="card-img-top img-fluid" src="../img/outer/${list.md_image}" alt="상의/아우터">
           <div class="card-body">
             <h3 class="card-title">Product Name</h3>
             <h4>$24.99</h4>
@@ -88,9 +77,9 @@
       <!-- /.col-lg-9 -->
 
     </div>
-
+	
+	</div>
   </div>
-  <!-- /.container -->
   
 <jsp:include page="../Layout/footer.jsp"/>  
 </body>

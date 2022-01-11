@@ -29,18 +29,18 @@
 
 	if(id == null){
 %>	
-          <a href="outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
-          <a href="pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
-          <a href="board.jsp" class="list-group-item" id="QnA">문의게시판</a>
-          <a href="fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
+          <a href="../Menu/outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
+          <a href="../Menu/pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
+          <a href="../Menu/board.jsp" class="list-group-item" id="QnA">문의게시판</a>
+          <a href="../Menu/fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
           <a href="../gallary/gallary.jsp" class="list-group-item" id="gallary">갤러리</a>
 <%	
 	}else{
 %>		
-          <a href="outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
-          <a href="pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
-          <a href="board.jsp" class="list-group-item" id="QnA">문의게시판</a>
-          <a href="fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
+          <a href="../Menu/outer.jsp" class="list-group-item" id="outer">상의/아우터</a>
+          <a href="../Menu/pants.jsp" class="list-group-item" id="pants">하의/팬츠</a>
+          <a href="../Menu/board.jsp" class="list-group-item" id="QnA">문의게시판</a>
+          <a href="../Menu/fileboard.jsp" class="list-group-item" id="fileboard">자료실</a>
           <a href="../gallary/gallary.jsp" class="list-group-item" id="gallary">갤러리</a>
 	      <a href="../member/logout.jsp" class="list-group-item" id="delete">로그아웃</a>
 <% 
@@ -57,10 +57,10 @@
         <c:forEach var="list" items="<%=outerList%>">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="outer/${list.md_filename}"><img class="card-img-top" src="../img/outer/${list.md_filename}" alt="상의/아우터"></a>
+              <a href="../sales/outerContent.jsp?${list.md_filename}"><img class="card-img-top" src="../img/outer/${list.md_filename}" alt="상의/아우터"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="WebContent/Menu/outer/${list.md_image}">${list.md_name}</a>
+                  <a href="../sales/outerContent.jsp?${list.md_image}">${list.md_name}</a>
                 </h4>
                 <h5>￦ ${list.md_price}</h5>
                 <p class="card-text">${list.md_description}</p>
