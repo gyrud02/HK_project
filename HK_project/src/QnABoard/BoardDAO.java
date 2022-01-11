@@ -12,6 +12,8 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 import javax.xml.stream.events.Comment;
 
+import Comment.CommentBean;
+
 public class BoardDAO { // 게시판 작성, 삭제, 수정과 관련된 클래스
 
 	Connection con = null;

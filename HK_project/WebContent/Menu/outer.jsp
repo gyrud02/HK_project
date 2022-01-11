@@ -1,5 +1,6 @@
 <%@page import="Merchandise.MerchandiseBean"%>
 <%@page import="Merchandise.MerchandiseDAO"%>
+<%@page import="java.util.List" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -13,7 +14,6 @@
 <%
 	MerchandiseDAO mdDAO = new MerchandiseDAO();
 	MerchandiseBean mdBean = new MerchandiseBean();
-	mdBean = mdDAO.getOuterList();
 %>
 </head>
 <body>
@@ -51,16 +51,19 @@
 	
 	 <div class="col-lg-9">
         <div class="row">
-        <c:forEach var="i" begin="0" end="2">
+<%
+	List<MerchandiseBean> outerList = mdDAO.getOuterList();
+%>        
+        <c:forEach var="list" items="<%=outerList%>">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="outer/<%=mdBean.getMd_filename()%>"><img class="card-img-top" src="../img/outer/<%=mdBean.getMd_filename()%>" alt="상의/아우터"></a>
+              <a href="outer/${list.md_filename}"><img class="card-img-top" src="../img/outer/${list.md_filename}" alt="상의/아우터"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="WebContent/Menu/outer/<%=mdBean.getMd_image()%>"><%=mdBean.getMd_name()%></a>
+                  <a href="WebContent/Menu/outer/${list.md_image}">${list.md_name}</a>
                 </h4>
-                <h5>￦ <%=mdBean.getMd_price()%></h5>
-                <p class="card-text"><%=mdBean.getMd_description()%></p>
+                <h5>￦ ${list.md_price}</h5>
+                <p class="card-text">${list.md_description}</p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>

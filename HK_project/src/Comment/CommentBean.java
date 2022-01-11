@@ -1,4 +1,4 @@
-package QnABoard;
+package Comment;
 
 import java.sql.Timestamp;
 

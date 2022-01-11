@@ -3,6 +3,7 @@ package Merchandise;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.naming.Context;
@@ -26,8 +27,8 @@ public class MerchandiseDAO {
 		return con;
 	} // getConnection()
 	
-	public MerchandiseBean getOuterList(){
-		MerchandiseBean mdbean = new MerchandiseBean();
+	public List<MerchandiseBean> getOuterList(){
+		List<MerchandiseBean> outerList = new ArrayList<>();
 		
 		try {
 			con = getConnection();
@@ -37,7 +38,8 @@ public class MerchandiseDAO {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery(sql);
 			
-			if(rs.next()){
+			while(rs.next()){
+				MerchandiseBean mdbean = new MerchandiseBean();
 				mdbean.setMd_idx(rs.getInt("md_idx"));
 				mdbean.setMd_name(rs.getString("md_name"));
 				mdbean.setMd_category(rs.getString("md_category"));
@@ -45,19 +47,21 @@ public class MerchandiseDAO {
 				mdbean.setMd_filename(rs.getString("md_filename"));
 				mdbean.setMd_image(rs.getString("md_image"));
 				mdbean.setMd_price(rs.getInt("md_price"));
+			
+				outerList.add(mdbean);
 			}
-			System.out.println("동작 오키");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			closeDB();
 		}
 		
-		return mdbean;
-	} // getList()
+		return outerList;
+	} // getOuterList()
 
-	public MerchandiseBean getPantList(){
-		MerchandiseBean mdbean = new MerchandiseBean();
+	public List<MerchandiseBean> getPantList(){
+		List<MerchandiseBean> pantsList = new ArrayList<>();
 		
 		try {
 			con = getConnection();
@@ -67,7 +71,8 @@ public class MerchandiseDAO {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery(sql);
 			
-			if(rs.next()){
+			while(rs.next()){
+				MerchandiseBean mdbean = new MerchandiseBean();
 				mdbean.setMd_idx(rs.getInt("md_idx"));
 				mdbean.setMd_name(rs.getString("md_name"));
 				mdbean.setMd_category(rs.getString("md_category"));
@@ -75,15 +80,17 @@ public class MerchandiseDAO {
 				mdbean.setMd_filename(rs.getString("md_filename"));
 				mdbean.setMd_image(rs.getString("md_image"));
 				mdbean.setMd_price(rs.getInt("md_price"));
+				
+				pantsList.add(mdbean);
 			}
-			System.out.println("동작 오키");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			closeDB();
 		}
 		
-		return mdbean;
+		return pantsList;
 	} // getPantList()
 	
 	public void closeDB(){
