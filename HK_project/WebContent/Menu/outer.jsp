@@ -57,10 +57,10 @@
         <c:forEach var="list" items="<%=outerList%>">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../sales/outerContent.jsp?${list.md_filename}"><img class="card-img-top" src="../img/outer/${list.md_filename}" alt="상의/아우터"></a>
+              <a href="../sales/outerContent.jsp?md_image=${list.md_filename}"><img class="card-img-top" src="../img/outer/${list.md_filename}" alt="상의/아우터"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="../sales/outerContent.jsp?${list.md_image}">${list.md_name}</a>
+                  <a href="../sales/outerContent.jsp?md_image=${list.md_image}">${list.md_name}</a>
                 </h4>
                 <h5>￦ ${list.md_price}</h5>
                 <p class="card-text">${list.md_description}</p>

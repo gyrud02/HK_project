@@ -93,6 +93,44 @@ public class MerchandiseDAO {
 		return pantsList;
 	} // getPantList()
 	
+	public List<MerchandiseBean> getOneList(String md_image){
+		
+		List<MerchandiseBean> oneList = new ArrayList<>();
+		System.out.println("mg_image : " + md_image);
+		try {
+			con = getConnection();
+			System.out.println("DB 연결 성공!");
+			
+			sql = "SELECT * FROM merchandise WHERE md_image = ?";
+			ps = con.prepareStatement(sql);
+			
+			ps.setString(1, md_image);
+			
+			rs = ps.executeQuery(sql);
+			
+			if(rs.next()){
+				MerchandiseBean mdbean = new MerchandiseBean();
+				mdbean.setMd_idx(rs.getInt("md_idx"));
+				mdbean.setMd_name(rs.getString("md_name"));
+				mdbean.setMd_category(rs.getString("md_category"));
+				mdbean.setMd_description(rs.getString("md_description"));
+				mdbean.setMd_filename(rs.getString("md_filename"));
+				mdbean.setMd_image(rs.getString("md_image"));
+				mdbean.setMd_price(rs.getInt("md_price"));
+				
+				oneList.add(mdbean);
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			closeDB();
+		}
+
+		return oneList;
+	} // getOneList()
+	
+	
 	public void closeDB(){
 		try {
 			if(rs != null){rs.close();}

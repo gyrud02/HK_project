@@ -57,10 +57,10 @@
           <c:forEach var="i" items="<%=pantsList%>">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../sales/pantsContent.jsp?${i.md_filename}"><img class="card-img-top" src="../img/pants/${i.md_filename}" alt="하의/팬츠"></a>
+              <a href="../sales/pantsContent.jsp?md_image=${i.md_filename}"><img class="card-img-top" src="../img/pants/${i.md_filename}" alt="하의/팬츠"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="../sales/pantsContent.jsp?${i.md_image}">${i.md_name}</a>
+                  <a href="../sales/pantsContent.jsp?md_image=${i.md_image}">${i.md_name}</a>
                 </h4>
                 <h5>￦ ${i.md_price}</h5>
                 <p class="card-text">${i.md_description}</p>

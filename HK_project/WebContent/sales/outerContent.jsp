@@ -1,3 +1,6 @@
+<%@ page import="Merchandise.MerchandiseBean" %>
+<%@ page import="Merchandise.MerchandiseDAO" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,6 +8,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>HKmall - 상의/아우터</title>
+<%
+	MerchandiseBean mdBean = new MerchandiseBean();
+	MerchandiseDAO mdDAO = new MerchandiseDAO();
+%>
 </head>
 <body>
 <jsp:include page="../Layout/header.jsp"/>
@@ -42,12 +49,16 @@
 
     <div class="col-lg-9">
 	  <div class="row">
+<%
+//		String md_image = (String)request.getParameter(md_image);
+//		List<MerchandiseBean> oneitem = mdDAO.getOneList(md_image);
+%>	  
         <div class="card mt-4">
-          <img class="card-img-top img-fluid" src="../img/outer/${list.md_image}" alt="상의/아우터">
+          <img class="card-img-top img-fluid" src="../img/outer/${oneitem.md_image}" alt="상의/아우터">
           <div class="card-body">
-            <h3 class="card-title">Product Name</h3>
-            <h4>$24.99</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+            <h3 class="card-title">Product Name${oneitem.md_name}</h3>
+            <h4>￦ ${oneitem.md_price}</h4>
+            <p class="card-text">${oneitem.md_description}</p>
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 stars
           </div>
