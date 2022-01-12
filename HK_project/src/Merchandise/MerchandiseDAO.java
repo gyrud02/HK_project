@@ -37,6 +37,7 @@ public class MerchandiseDAO {
 			sql = "SELECT * FROM merchandise WHERE md_category = '상의/아우터'";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery(sql);
+			System.out.println("되나?");
 			
 			while(rs.next()){
 				MerchandiseBean mdbean = new MerchandiseBean();
@@ -50,7 +51,8 @@ public class MerchandiseDAO {
 			
 				outerList.add(mdbean);
 			}
-
+			System.out.println("어디까지?");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

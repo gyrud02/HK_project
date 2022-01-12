@@ -10,5 +10,7 @@
 	username="jspid"
 	password="jsppass"
 	/>
-
+<!-- 
+	url="jdbc:mysql://3.23.185.192:3306/jspbeginner"
+-->
 </Context>
